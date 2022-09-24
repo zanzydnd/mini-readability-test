@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini-readability</title>
+</head>
+<body>
+
+<h1>Mini-читабельность</h1>
+<form action="{% url 'process_url' %}" method="post">
+    {% csrf_token %}
+    <label for="url">Введите URL:</label>
+    <input type="url" name="url" id="url"
+           placeholder="https://example.com"
+           pattern="https://.*" size="30"
+           required>
+    <input type="submit" value="Подтвердить">
+</form>
+</body>
+</html>
